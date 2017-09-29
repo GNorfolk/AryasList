@@ -1,12 +1,12 @@
 <h1>Change name</h1>
 
-<form action="/posts/<%= @id %>" method="POST">
+<form action="/aryaslist/<%= @id %>" method="POST">
 
-	<label for="title">Title: </label>
-	<input type="text" name="title" value="<%= @post[:title] %>">
+	<label for="name">Name: </label>
+	<input type="text" name="name" value="<%= @list[:name] %>">
 
-	<label for="body">Body: </label>
-	<textarea name="body"><%= @post[:body] %></textarea>
+	<label for="desc">Reasoning: </label>
+	<textarea name="desc"><%= @list[:desc] %></textarea>
 
 	<input type="hidden" name="_method" value="PUT">
 

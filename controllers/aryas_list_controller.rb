@@ -59,9 +59,7 @@ class AryasListController < Sinatra::Base
 		{
 			name: "Weese",
 			desc: "For mistreating her in Harrenhal."
-		},
-
-	]
+		}]
 
 	# Index
 	get '/aryaslist' do
@@ -78,13 +76,19 @@ class AryasListController < Sinatra::Base
 
 	# Create
 	post '/aryaslist/' do
-
+		# 
 	end
 
 	# Show
 	get '/aryaslist/:id' do
 		@show = "Show"
 		erb :"aryas_list/show"
+	end
+
+	# Edit
+	get '/aryaslist/:id/edit' do
+		@id = params[:id].to_i
+		@list = $list[@id]
 	end
 
 
