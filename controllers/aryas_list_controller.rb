@@ -74,14 +74,11 @@ class AryasListController < Sinatra::Base
 		erb :"aryas_list/new"
 	end
 
-	# Create
-	post '/aryaslist/' do
-		# 
-	end
-
 	# Show
 	get '/aryaslist/:id' do
 		@show = "Show"
+		@id = params[:id].to_i
+		@list = $list
 		erb :"aryas_list/show"
 	end
 
@@ -91,6 +88,13 @@ class AryasListController < Sinatra::Base
 		@list = $list[@id]
 	end
 
+	# Create
+	post '/aryaslist/' do
+		# 
+	end
 
+	# Update
+
+	# Destroy
 
 end
