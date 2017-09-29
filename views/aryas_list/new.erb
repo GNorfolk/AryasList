@@ -1,9 +1,12 @@
 <h2><%= @new %></h2>
 
 <form action="/aryaslist" method="POST">
-	<label for="name"></label>
+
+	<label for="name">Name: </label>
 	<input type="text" name="name" placeholder="Name the heathen!">
-	<label for="desc"></label>
+
+	<label for="desc">Reasoning: </label>
 	<input type="text" name="desc" placeholder="Why must they die?">
-	<input type="submit" name="Add to Arya's list">
+	
+	<input type="submit" value="Add them to the list!">
 </form>

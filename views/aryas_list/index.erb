@@ -1,1 +1,16 @@
 <h2><%= @index %></h2>
+
+<% @list.each_with_index do |list, index| %>
+
+	<h3><%= list[:name] %></h3>
+	<p><%= list[:desc] %></p>
+
+	<a href="aryaslist/<%= index %>">Click here to check out the heathen!</a>
+	<a href="aryaslist/<%= index %>/edit">Click here change the heathen!</a>
+
+	<form action="/aryaslist/<%= index %>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" name="Delete">
+	</form>
+
+<% end %>
