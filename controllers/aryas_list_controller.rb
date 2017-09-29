@@ -27,10 +27,18 @@ class AryasListController < Sinatra::Base
 		erb :"aryas_list/index"
 	end
 
+	# New
+	get '/aryaslist/new' do
+		@new = 'New'
+		erb :"aryas_list/new"
+	end
+
 	# Show
 	get '/aryaslist/:id' do
 		@show = "Show"
 		erb :"aryas_list/show"
 	end
+
+
 
 end
