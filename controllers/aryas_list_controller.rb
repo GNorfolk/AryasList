@@ -21,4 +21,16 @@ class AryasListController < Sinatra::Base
 			body: "This is the third person on Arya\'s list"
 	}]
 
+	# Index
+	get '/aryaslist' do
+		@index = "Index"
+		erb :"aryas_list/index"
+	end
+
+	# Show
+	get '/aryaslist/:id' do
+		@show = "Show"
+		erb :"aryas_list/show"
+	end
+
 end
